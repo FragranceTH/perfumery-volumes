@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://fragranceth.github.io/perfumery-volumes/sitemap.xml
