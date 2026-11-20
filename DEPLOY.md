@@ -66,7 +66,7 @@ Carrd cannot import an HTML file, so this means rebuilding by hand: one hero sec
 
 Payhip charges nothing monthly and takes roughly 5% per sale. It handles card payments and tax for you as merchant of record. If you prefer Gumroad, the fee is closer to 10% but the setup is identical.
 
-Two settings worth turning on before launch: the seven-day refund policy in your store settings, and the affiliate feature at 30–35%, which costs nothing until someone actually sells a copy for you.
+One setting worth turning on before launch: the affiliate feature at 30–35%, which costs nothing until someone actually sells a copy for you. Set the store's own policy to all sales final so it matches the page.
 
 ---
 
@@ -92,7 +92,7 @@ Open the live URL in a private window and check, in this order:
 - Click each of the three buy buttons. You should land on a Payhip checkout with the right product and price.
 - Submit the form with your own email. You should either reach `sample.pdf` or receive an email.
 - Open the site on a phone. The covers should stack above the headline, the price cards should be one column.
-- Buy the bundle yourself with a real card, confirm the download works, then refund yourself. Do this once — broken delivery is the most expensive bug in this business.
+- Buy the bundle yourself with a real card, confirm the download works, then reverse the payment in your store dashboard. Do this once — broken delivery is the most expensive bug in this business.
 - Confirm no button shows the placeholder alert.
 
 ---

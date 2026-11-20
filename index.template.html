@@ -1,0 +1,518 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Perfumery: The Complete Manual &amp; The Material Codex — two PDF volumes for people starting at the bench</title>
+<meta name="description" content="A 39-page craft manual and a 107-page material codex: dilution maths, seven accords, IFRA compliance, costing, bottling, and 103 materials profiled one page each. Instant PDF download.">
+<meta property="og:title" content="Perfumery: The Complete Manual & The Material Codex">
+<meta property="og:description" content="Two PDF volumes for people who want to make perfume, not just wear it. 146 pages. 103 materials. $29 / $39 / $59.">
+<meta property="og:type" content="product">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;0,600;1,400&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --ink:#17140F; --paper:#FCFAF5; --cream:#F4EEE2; --cream2:#EFE7D8;
+    --gold:#A07C42; --gold-dark:#86662F; --muted:#6C6457; --line:#E3D9C6;
+    --white:#fff; --max:1120px;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth}
+  body{
+    background:var(--paper); color:var(--ink);
+    font-family:"Inter",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif;
+    font-size:16px; line-height:1.65; font-weight:400;
+    -webkit-font-smoothing:antialiased;
+  }
+  h1,h2,h3,.serif{font-family:"EB Garamond",Georgia,"Times New Roman",serif;font-weight:500}
+  a{color:inherit}
+  img{max-width:100%;display:block}
+  .wrap{max-width:var(--max);margin:0 auto;padding:0 24px}
+  .eyebrow{font-size:11px;letter-spacing:.22em;text-transform:uppercase;font-weight:600;color:var(--gold)}
+  .muted{color:var(--muted)}
+
+  /* nav */
+  nav{position:sticky;top:0;z-index:40;background:rgba(252,250,245,.92);backdrop-filter:blur(8px);border-bottom:1px solid var(--line)}
+  nav .wrap{display:flex;align-items:center;justify-content:space-between;height:58px}
+  nav .brand{font-family:"EB Garamond",serif;font-size:17px;letter-spacing:.01em}
+  nav .brand span{color:var(--gold)}
+  nav .links{display:flex;gap:24px;align-items:center;font-size:14px}
+  nav .links a{text-decoration:none;color:var(--muted)}
+  nav .links a:hover{color:var(--ink)}
+  nav .btn-sm{background:var(--ink);color:var(--paper);padding:9px 18px;border-radius:2px;text-decoration:none;font-size:13px;font-weight:500}
+  @media(max-width:720px){nav .links a:not(.btn-sm){display:none}}
+
+  /* hero */
+  header{padding:64px 0 48px;position:relative;overflow:hidden}
+  header .wrap{display:grid;grid-template-columns:1.15fr .85fr;gap:56px;align-items:center}
+  header h1{font-size:clamp(34px,4.4vw,56px);line-height:1.04;letter-spacing:-.015em;margin:18px 0 20px}
+  header h1 em{font-style:italic;color:var(--gold)}
+  header p.lead{font-size:17px;line-height:1.7;color:#403828;max-width:46ch}
+  .cta-row{display:flex;gap:12px;flex-wrap:wrap;margin-top:28px}
+  .btn{display:inline-block;padding:14px 26px;border-radius:2px;text-decoration:none;font-size:15px;font-weight:500;transition:.15s ease;border:1px solid transparent}
+  .btn-primary{background:var(--ink);color:var(--paper)}
+  .btn-primary:hover{background:#2C261C}
+  .btn-ghost{border-color:#CFC3AA;color:var(--ink)}
+  .btn-ghost:hover{border-color:var(--ink)}
+  .hero-note{margin-top:18px;font-size:13px;color:var(--muted)}
+  .covers{position:relative;display:flex;justify-content:center;align-items:flex-end;gap:0}
+  .covers img{width:52%;box-shadow:0 24px 50px -18px rgba(23,20,15,.5);border:1px solid rgba(0,0,0,.15)}
+  .covers img:first-child{transform:translateY(-14px) rotate(-1.2deg);z-index:1}
+  .covers img:last-child{transform:translateY(10px) rotate(1.4deg);margin-left:-6%}
+  @media(max-width:880px){
+    header{padding:36px 0 24px}
+    header .wrap{grid-template-columns:1fr;gap:36px}
+    .covers{order:-1;max-width:420px;margin:0 auto}
+  }
+
+  /* rule */
+  .section{padding:76px 0;border-top:1px solid var(--line)}
+  .section h2{font-size:clamp(27px,3vw,36px);line-height:1.15;letter-spacing:-.01em;margin:12px 0 14px}
+  .section .intro{max-width:62ch;color:#403828;font-size:16px}
+
+  /* volumes */
+  .vol-grid{display:grid;grid-template-columns:1fr 1fr;gap:28px;margin-top:44px}
+  .vol{background:var(--white);border:1px solid var(--line);padding:34px 32px;display:flex;flex-direction:column}
+  .vol .tag{font-size:10.5px;letter-spacing:.18em;text-transform:uppercase;font-weight:600;color:var(--gold)}
+  .vol h3{font-size:25px;line-height:1.2;margin:10px 0 6px}
+  .vol .meta{font-size:13px;color:var(--muted);margin-bottom:18px}
+  .vol ul{list-style:none;margin:0 0 22px}
+  .vol li{position:relative;padding-left:20px;margin-bottom:10px;font-size:14.5px;line-height:1.6}
+  .vol li:before{content:"";position:absolute;left:0;top:10px;width:10px;height:1px;background:var(--gold)}
+  .vol .price-foot{margin-top:auto;padding-top:18px;border-top:1px solid var(--line);display:flex;align-items:baseline;justify-content:space-between}
+  .vol .price-foot b{font-family:"EB Garamond",serif;font-size:24px;font-weight:500}
+  .vol .price-foot a{font-size:14px;text-decoration:none;border-bottom:1px solid var(--gold);padding-bottom:1px}
+  @media(max-width:820px){.vol-grid{grid-template-columns:1fr}}
+
+  /* contents */
+  .contents{display:grid;grid-template-columns:1fr 1fr;gap:56px;margin-top:44px}
+  .contents h3{font-size:20px;margin-bottom:18px;padding-bottom:10px;border-bottom:1px solid var(--ink)}
+  .part{font-size:10.5px;letter-spacing:.18em;text-transform:uppercase;font-weight:600;color:var(--gold);margin:22px 0 8px}
+  .chlist{list-style:none;font-size:14px;line-height:1.5}
+  .chlist li{display:flex;gap:10px;padding:4px 0;color:#3B342A}
+  .chlist li span:first-child{color:var(--gold);font-variant-numeric:tabular-nums;min-width:22px;font-size:12.5px;padding-top:1px}
+  .fam{display:flex;justify-content:space-between;gap:12px;padding:7px 0;border-bottom:1px solid var(--line);font-size:14.5px}
+  .fam span:last-child{color:var(--muted);font-variant-numeric:tabular-nums;font-size:13.5px}
+  @media(max-width:820px){.contents{grid-template-columns:1fr;gap:40px}}
+
+  /* spread */
+  .spread{background:var(--cream);padding:76px 0;border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+  .spread .wrap{display:grid;grid-template-columns:.95fr 1.05fr;gap:56px;align-items:center}
+  .spread img{border:1px solid #D8CCB4;box-shadow:0 18px 40px -20px rgba(23,20,15,.45)}
+  .spread h2{font-size:clamp(25px,2.8vw,33px);margin-bottom:16px}
+  .spread p{color:#403828;margin-bottom:14px}
+  .spread .cap{font-size:12.5px;color:var(--muted);margin-top:14px}
+  @media(max-width:820px){.spread .wrap{grid-template-columns:1fr;gap:32px}}
+
+  /* pricing */
+  .pricing{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;margin-top:44px;align-items:stretch}
+  .tier{border:1px solid var(--line);background:var(--white);padding:30px 26px;display:flex;flex-direction:column;position:relative}
+  .tier.best{border:1.5px solid var(--gold);box-shadow:0 16px 40px -26px rgba(160,124,66,.6)}
+  .tier .flag{position:absolute;top:-11px;left:26px;background:var(--gold);color:#fff;font-size:10px;letter-spacing:.16em;text-transform:uppercase;font-weight:600;padding:4px 10px}
+  .tier h3{font-size:17px;font-family:"Inter",sans-serif;font-weight:600;letter-spacing:.01em;margin-bottom:4px}
+  .tier .what{font-size:13px;color:var(--muted);min-height:38px;margin-bottom:16px}
+  .tier .amount{font-family:"EB Garamond",serif;font-size:40px;line-height:1;margin-bottom:2px}
+  .tier .amount small{font-size:15px;font-family:"Inter",sans-serif;color:var(--muted)}
+  .tier .save{font-size:12.5px;color:var(--gold-dark);margin-bottom:20px;font-weight:500}
+  .tier ul{list-style:none;font-size:13.8px;margin-bottom:24px}
+  .tier li{padding:5px 0 5px 18px;position:relative;color:#3B342A}
+  .tier li:before{content:"";position:absolute;left:0;top:11px;width:8px;height:1px;background:var(--gold)}
+  .tier .btn{margin-top:auto;text-align:center;width:100%}
+  .tier .fine{font-size:11.5px;color:var(--muted);text-align:center;margin-top:10px}
+  @media(max-width:880px){.pricing{grid-template-columns:1fr;max-width:440px;margin-left:auto;margin-right:auto}}
+
+  /* excerpt */
+  .excerpt{background:var(--ink);color:var(--paper);padding:64px 0}
+  .excerpt .wrap{display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:center}
+  .excerpt h2{font-size:clamp(24px,2.6vw,31px);color:var(--paper);margin-bottom:12px}
+  .excerpt p{color:#C9BFAE;font-size:15px}
+  .excerpt .eyebrow{color:var(--gold)}
+  form{display:flex;gap:10px;flex-wrap:wrap}
+  input[type=email]{flex:1 1 240px;padding:14px 16px;border:1px solid #3D3527;background:#221D15;color:var(--paper);font-size:15px;border-radius:2px;font-family:inherit}
+  input[type=email]::placeholder{color:#8C8271}
+  input[type=email]:focus{outline:none;border-color:var(--gold)}
+  form button{background:var(--gold);color:#17140F;border:none;padding:14px 24px;font-size:14.5px;font-weight:600;border-radius:2px;cursor:pointer;font-family:inherit}
+  form button:hover{background:#B38E4F}
+  .form-note{font-size:12px;color:#8C8271;margin-top:12px;width:100%}
+  @media(max-width:820px){.excerpt .wrap{grid-template-columns:1fr;gap:24px}}
+
+  /* fit */
+  .fit{display:grid;grid-template-columns:1fr 1fr;gap:48px;margin-top:40px}
+  .fit h3{font-size:18px;margin-bottom:14px}
+  .fit ul{list-style:none;font-size:15px}
+  .fit li{padding:7px 0 7px 22px;position:relative;color:#3B342A}
+  .fit li:before{content:"—";position:absolute;left:0;color:var(--gold)}
+  .fit .no li:before{content:"×";color:#A89C88}
+  @media(max-width:820px){.fit{grid-template-columns:1fr;gap:32px}}
+
+  /* faq */
+  details{border-bottom:1px solid var(--line);padding:18px 0}
+  details summary{cursor:pointer;font-size:16px;font-weight:500;list-style:none;display:flex;justify-content:space-between;gap:16px}
+  details summary::-webkit-details-marker{display:none}
+  details summary:after{content:"+";color:var(--gold);font-size:19px;line-height:1}
+  details[open] summary:after{content:"–"}
+  details p{margin-top:12px;color:#403828;font-size:15px;max-width:75ch}
+
+  footer{padding:56px 0 48px;border-top:1px solid var(--line);font-size:13px;color:var(--muted)}
+  footer .wrap{display:flex;justify-content:space-between;gap:24px;flex-wrap:wrap}
+  footer a{text-decoration:none;border-bottom:1px solid var(--line)}
+</style>
+</head>
+<body>
+
+<nav>
+  <div class="wrap">
+    <div class="brand">Perfumery <span>&amp;</span> Materials</div>
+    <div class="links">
+      <a href="#volumes">The volumes</a>
+      <a href="#contents">Contents</a>
+      <a href="#pricing">Pricing</a>
+      <a href="#sample">Free sample</a>
+      <a class="btn-sm" href="#pricing">Get both — $59</a>
+    </div>
+  </div>
+</nav>
+
+<header>
+  <div class="wrap">
+    <div>
+      <div class="eyebrow">Two PDF volumes · 146 pages · 103 materials</div>
+      <h1>Everything a perfumer knows<br>before the <em>first bottle</em> works.</h1>
+      <p class="lead">A complete manual of the craft, and a codex that profiles every material worth knowing — one page each. Written for the person starting at zero, with the arithmetic, the regulations and the money left in.</p>
+      <div class="cta-row">
+        <a class="btn btn-primary" href="#pricing">Get both — $59</a>
+        <a class="btn btn-ghost" href="#contents">See what's inside</a>
+      </div>
+      <div class="hero-note">Instant PDF download · free revisions · A4, printable</div>
+    </div>
+    <div class="covers">
+      <img src="%%COV1%%" alt="Perfumery: The Complete Manual — Volume I cover">
+      <img src="%%COV2%%" alt="The Material Codex — Volume II cover">
+    </div>
+  </div>
+</header>
+
+<section class="section" id="volumes">
+  <div class="wrap">
+    <div class="eyebrow">The two volumes</div>
+    <h2>One teaches the craft.<br>One is the organ, in writing.</h2>
+    <p class="intro">Most perfumery books give you either chemistry you cannot use or recipes you cannot adapt. These two are built around what happens at a bench: what to buy, how much to weigh, why a formula collapses, and what it costs to sell the result.</p>
+
+    <div class="vol-grid">
+      <article class="vol">
+        <div class="tag">Volume I</div>
+        <h3>Perfumery:<br>The Complete Manual</h3>
+        <div class="meta">39 pages · 31 chapters · 6 parts</div>
+        <ul>
+          <li>Dilution maths and formula percentages, worked line by line</li>
+          <li>Formula architecture with working proportions, and seven accords to master</li>
+          <li>The seven extraction routes, and how to read a certificate of analysis</li>
+          <li>IFRA, allergens and market authorisation, in the order they must be done</li>
+          <li>Bottles, pumps, labels, small-batch production and stability testing</li>
+          <li>Costing, margin, wholesale maths, launch and the mistakes that end brands</li>
+        </ul>
+        <div class="price-foot"><b>$29</b><a href="#pricing">Read the chapter list</a></div>
+      </article>
+
+      <article class="vol">
+        <div class="tag">Volume II</div>
+        <h3>The Material<br>Codex</h3>
+        <div class="meta">107 pages · 103 materials · 74 photographic plates</div>
+        <ul>
+          <li>One page per material, the same six fields throughout</li>
+          <li>Odour profile, role in the formula, history, origin and production</li>
+          <li>Mood and memory, plus technique: pairings, dose limits, pitfalls</li>
+          <li>Tenacity, cost band and how easy each one is to actually buy</li>
+          <li>From bergamot and rose otto to oakmoss, oud and Ambroxan</li>
+          <li>Alphabetical index and a families overview for fast reference</li>
+        </ul>
+        <div class="price-foot"><b>$39</b><a href="#pricing">Read the chapter list</a></div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="contents" style="background:var(--cream)">
+  <div class="wrap">
+    <div class="eyebrow">Contents</div>
+    <h2>Every chapter, before you pay.</h2>
+    <p class="intro">No mystery modules. This is the complete table of contents for both volumes.</p>
+
+    <div class="contents">
+      <div>
+        <h3>Volume I — The Complete Manual</h3>
+        <div class="part">Part I · Foundations</div>
+        <ul class="chlist">
+          <li><span>1</span><span>What this industry actually is</span></li>
+          <li><span>2</span><span>How smell works, and why it misleads you</span></li>
+          <li><span>3</span><span>The families, and the vocabulary</span></li>
+        </ul>
+        <div class="part">Part II · Materials</div>
+        <ul class="chlist">
+          <li><span>4</span><span>Naturals, molecules, and the argument between them</span></li>
+          <li><span>5</span><span>How a plant becomes a liquid</span></li>
+          <li><span>6</span><span>Specs, certificates and quality</span></li>
+        </ul>
+        <div class="part">Part III · The bench</div>
+        <ul class="chlist">
+          <li><span>7</span><span>Your first bench, at three budgets</span></li>
+          <li><span>8</span><span>Dilution, percentage, and the numbers that decide everything</span></li>
+          <li><span>9</span><span>Building a formula that holds together</span></li>
+          <li><span>10</span><span>Seven accords worth mastering first</span></li>
+          <li><span>11</span><span>Training the nose: a ninety-day protocol</span></li>
+        </ul>
+        <div class="part">Part IV · Professional practice</div>
+        <ul class="chlist">
+          <li><span>12</span><span>The brief, the mod, and how professional work flows</span></li>
+          <li><span>13</span><span>Stability, discolouration, and why your perfume changed</span></li>
+          <li><span>14</span><span>IFRA, allergens, and the compliance workflow</span></li>
+          <li><span>15</span><span>What each market actually requires</span></li>
+        </ul>
+        <div class="part">Part V · Education and career</div>
+        <ul class="chlist">
+          <li><span>16</span><span>Schools, courses, and what they are worth</span></li>
+          <li><span>17</span><span>Careers, roles, and what people earn</span></li>
+        </ul>
+        <div class="part">Part VI · Making a product</div>
+        <ul class="chlist">
+          <li><span>18</span><span>Format, concentration, and what the label promises</span></li>
+          <li><span>19</span><span>Alcohol, carriers, and the chemistry of the medium</span></li>
+          <li><span>20</span><span>Bottles, pumps, and the parts that fail</span></li>
+          <li><span>21</span><span>Labels, packaging, and what has to be printed</span></li>
+          <li><span>22</span><span>Costing, pricing, and the arithmetic of margin</span></li>
+          <li><span>23</span><span>Compounding and filling at small scale</span></li>
+          <li><span>24</span><span>Where perfume actually sells</span></li>
+          <li><span>25</span><span>Launching without burning the budget</span></li>
+          <li><span>26</span><span>Shipping alcohol without losing your mind</span></li>
+          <li><span>27</span><span>The mistakes that end brands</span></li>
+        </ul>
+        <div class="part">Appendices</div>
+        <ul class="chlist">
+          <li><span>A</span><span>Dilution and formula tables</span></li>
+          <li><span>B</span><span>Six formula skeletons</span></li>
+          <li><span>C</span><span>Glossary</span></li>
+          <li><span>D</span><span>A twelve-month self-taught curriculum</span></li>
+        </ul>
+      </div>
+
+      <div>
+        <h3>Volume II — The Material Codex</h3>
+        <p class="muted" style="font-size:14px;margin-bottom:18px">103 materials, grouped by how they behave in a formula, one page each: odour, role, history, production, mood, technique.</p>
+        <div class="fam"><span>Citrus</span><span>%%C_Citrus%% materials</span></div>
+        <div class="fam"><span>Florals</span><span>%%C_Florals%% materials</span></div>
+        <div class="fam"><span>Green &amp; herbal</span><span>%%C_Green%% materials</span></div>
+        <div class="fam"><span>Fruit</span><span>%%C_Fruit%% materials</span></div>
+        <div class="fam"><span>Spice</span><span>%%C_Spice%% materials</span></div>
+        <div class="fam"><span>Woods</span><span>%%C_Woods%% materials</span></div>
+        <div class="fam"><span>Resins &amp; balsams</span><span>%%C_Resins%% materials</span></div>
+        <div class="fam"><span>Mosses</span><span>%%C_Mosses%% materials</span></div>
+        <div class="fam"><span>Leather &amp; smoke</span><span>%%C_Leather%% materials</span></div>
+        <div class="fam"><span>Animalic materials</span><span>%%C_Animalic%% materials</span></div>
+        <div class="fam"><span>Musks</span><span>%%C_Musks%% materials</span></div>
+        <div class="fam"><span>Ambers &amp; sweet bases</span><span>%%C_Ambers%% materials</span></div>
+        <div class="fam"><span>Aldehydes &amp; modern synthetics</span><span>%%C_Aldehydes%% materials</span></div>
+        <div class="fam" style="border-bottom:none;padding-top:14px"><span><b>Total</b></span><span><b>103</b></span></div>
+
+        <div class="eyebrow" style="margin-top:34px">Also inside</div>
+        <ul class="chlist" style="margin-top:12px">
+          <li><span>—</span><span>How to use the codex, and what each chip means</span></li>
+          <li><span>—</span><span>Families at a glance</span></li>
+          <li><span>—</span><span>Alphabetical index of every material</span></li>
+          <li><span>—</span><span>74 photographic plates and 29 drawn specimen plates</span></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="spread" id="sample">
+  <div class="wrap">
+    <div>
+      <img src="%%SPREAD%%" alt="A page from The Material Codex showing the bergamot entry">
+      <div class="cap">A single page of the Codex — actual size A4.</div>
+    </div>
+    <div>
+      <div class="eyebrow">Look before you buy</div>
+      <h2>Every material gets the same six questions.</h2>
+      <p>What does it smell like at a concentration you can use? What is it doing in the formula, and at what percentage? Where does it come from, and how is it farmed or made? What mood does it occupy? And what goes wrong when you use it.</p>
+      <p>That uniformity is the point: it lets you compare a bergamot, a musk and a molecule from a laboratory fairly, in the same shape, on facing pages.</p>
+      <p class="muted" style="font-size:14px">Read the six-page sample first: the guide to using the codex, the families overview, three complete material pages and the index.</p>
+      <div class="cta-row" style="margin-top:22px">
+        <a class="btn btn-primary" href="#signup">Send me the sample</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="pricing">
+  <div class="wrap">
+    <div class="eyebrow">Pricing</div>
+    <h2>Buy one, or both.</h2>
+    <p class="intro">PDF, A4, delivered instantly. Yours to read on any device and to print for your own bench. Free revisions whenever the books are updated.</p>
+
+    <div class="pricing">
+      <div class="tier">
+        <h3>Volume I</h3>
+        <div class="what">The craft, from first accord to first bottle.</div>
+        <div class="amount">$29</div>
+        <div class="save">39 pages · 31 chapters</div>
+        <ul>
+          <li>Dilution and formula maths</li>
+          <li>Seven accords</li>
+          <li>IFRA and market compliance</li>
+          <li>Costing, bottling and launch</li>
+          <li>Four appendices and a glossary</li>
+        </ul>
+        <a class="btn btn-ghost" href="%%BUY_VOL1%%">Buy Volume I</a>
+        <div class="fine">Instant download</div>
+      </div>
+
+      <div class="tier best">
+        <div class="flag">Best value</div>
+        <h3>Both volumes</h3>
+        <div class="what">The complete set: method and materials.</div>
+        <div class="amount">$59 <small>save $9</small></div>
+        <div class="save">146 pages · everything above</div>
+        <ul>
+          <li>Volume I — The Complete Manual</li>
+          <li>Volume II — The Material Codex</li>
+          <li>103 material pages, 74 plates</li>
+          <li>All four appendices</li>
+          <li>Free revisions, both files</li>
+        </ul>
+        <a class="btn btn-primary" href="%%BUY_BOTH%%">Get both — $59</a>
+        <div class="fine">Instant download · both files</div>
+      </div>
+
+      <div class="tier">
+        <h3>Volume II</h3>
+        <div class="what">The organ in writing — 103 materials.</div>
+        <div class="amount">$39</div>
+        <div class="save">107 pages · 103 materials</div>
+        <ul>
+          <li>One page per material</li>
+          <li>Tenacity, cost and access bands</li>
+          <li>History and production notes</li>
+          <li>74 photographic plates</li>
+          <li>Alphabetical index</li>
+        </ul>
+        <a class="btn btn-ghost" href="%%BUY_VOL2%%">Buy Volume II</a>
+        <div class="fine">Instant download</div>
+      </div>
+    </div>
+
+    <p class="muted" style="font-size:13.5px;margin-top:26px">Payment by card and major wallets, handled by the store. Prices in USD. Buyers outside the US pay in their own currency at checkout; tax is calculated there.</p>
+    <p style="margin-top:14px;font-size:14.5px;max-width:70ch"><b>Delivery is instant, so all sales are final.</b> That is why the six-page sample is free and the full contents are listed above: read both before you pay.</p>
+  </div>
+</section>
+
+<section class="excerpt" id="signup">
+  <div class="wrap">
+    <div>
+      <div class="eyebrow">Free sample</div>
+      <h2>Six pages, no purchase.</h2>
+      <p>Six pages pulled straight from the book: how to read the codex, the families at a glance, and three complete material pages — bergamot, rose otto and oakmoss. Enough to judge the format before you spend anything.</p>
+    </div>
+    <div>
+      <form action="%%FORM_ACTION%%" method="POST">
+        <input type="email" name="email" placeholder="your@email.com" required aria-label="Your email address">
+        <input type="hidden" name="_next" value="sample.pdf">
+        <button type="submit">Send the sample</button>
+        <div class="form-note">One email with the PDF, then occasional notes when a volume is revised. Unsubscribe in one click.</div>
+        <div class="form-note"><a href="sample.pdf" style="color:#D8CDB8;text-decoration:underline">Or download the six-page sample directly</a></div>
+      </form>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="wrap">
+    <div class="eyebrow">Honest fit</div>
+    <h2>This is not for everyone.</h2>
+    <div class="fit">
+      <div>
+        <h3>Buy it if you are</h3>
+        <ul>
+          <li>Starting to make perfume and tired of conflicting forum advice</li>
+          <li>Building a small brand and need the compliance and costing chapters</li>
+          <li>Self-taught, and want a structured twelve-month path</li>
+          <li>A formulator who wants a single reference for materials on one shelf</li>
+          <li>Teaching a class or running a workshop and need a text you can hand out</li>
+        </ul>
+      </div>
+      <div class="no">
+        <h3>Skip it if you want</h3>
+        <ul>
+          <li>Perfume reviews, ratings, or a guide to buying designer bottles</li>
+          <li>Ready-made formulas to copy without understanding them</li>
+          <li>A video course — this is a written reference, no video, no community</li>
+          <li>Medical or safety advice about using essential oils therapeutically</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="faq" style="background:var(--cream)">
+  <div class="wrap">
+    <div class="eyebrow">Questions</div>
+    <h2>Before you buy.</h2>
+    <div style="margin-top:26px">
+      <details open>
+        <summary>What exactly do I get?</summary>
+        <p>Two PDF files, A4, designed for reading on screen and printing. Volume I is 39 pages, Volume II is 107. Both are yours to keep, with free revisions when they are updated.</p>
+      </details>
+      <details open>
+        <summary>What is your returns policy?</summary>
+        <p>All sales are final, because the files arrive instantly and cannot be returned. The six-page sample and the complete contents list are free to review first — and if something is still unclear, email and ask before you buy.</p>
+      </details>
+      <details>
+        <summary>I have never made perfume. Is this too advanced?</summary>
+        <p>No. Volume I assumes no chemistry and starts with what the industry actually is and how smell behaves. Chapter 8 is the only maths, and it is worked line by line. The codex is reference — you dip into it as you buy materials.</p>
+      </details>
+      <details>
+        <summary>Does it cover IFRA and the regulations?</summary>
+        <p>Yes — chapters 14 and 15 cover IFRA, allergen declaration and what each market requires, and it deliberately teaches you how to read a current certificate rather than printing limits that go out of date. It is educational, not legal advice.</p>
+      </details>
+      <details>
+        <summary>How is it delivered?</summary>
+        <p>Immediately after payment: a download link on screen and by email. No account needed, no app.</p>
+      </details>
+      <details>
+        <summary>Can I print it or use it in a class?</summary>
+        <p>Print it for your own bench, yes. For teaching, workshops or resale, get in touch — there is a simple licence for that.</p>
+      </details>
+      <details>
+        <summary>Are the material photographs real?</summary>
+        <p>Seventy-four are photographic plates of the material as it arrives. The pure aroma chemicals — vanillin, the aldehydes, the musks — get a drawn specimen plate captioned with their actual form, because a photograph of thirty identical vials would tell you nothing.</p>
+      </details>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <div>
+      <div class="serif" style="font-size:16px;color:var(--ink);margin-bottom:6px">Perfumery &amp; Materials</div>
+      <div>Two volumes for people starting at the bench. PDF, instant delivery.</div>
+    </div>
+    <div style="text-align:right">
+      <div><a href="#pricing">Pricing</a> · <a href="#signup">Free sample</a> · <a href="#faq">FAQ</a></div>
+      <div style="margin-top:6px">Educational content only — not legal, medical or safety advice.</div>
+    </div>
+  </div>
+</footer>
+
+<script>
+  // Guards against forgotten placeholder links before launch.
+  document.querySelectorAll('a[href*="REPLACE"]').forEach(function(a){
+    a.addEventListener('click', function(e){
+      e.preventDefault();
+      alert('This button still points at a placeholder.\n\nReplace the checkout URL in index.html with your store link.');
+    });
+  });
+</script>
+
+</body>
+</html>
