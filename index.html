@@ -57,6 +57,7 @@
   .btn-primary:hover{background:#2C261C}
   .btn-ghost{border-color:#CFC3AA;color:var(--ink)}
   .btn-ghost:hover{border-color:var(--ink)}
+  .btn.is-disabled{opacity:.45;pointer-events:none;cursor:default}
   .hero-note{margin-top:18px;font-size:13px;color:var(--muted)}
   .covers{position:relative;display:flex;justify-content:center;align-items:flex-end;gap:0}
   .covers img{width:52%;box-shadow:0 24px 50px -18px rgba(23,20,15,.5);border:1px solid rgba(0,0,0,.15)}
@@ -178,7 +179,7 @@
       <a href="#contents">Contents</a>
       <a href="#pricing">Pricing</a>
       <a href="#sample">Free sample</a>
-      <a class="btn-sm" href="#pricing">Get both — $59</a>
+      <a class="btn-sm" href="https://payhip.com/b/HTg6P">Get both — $59</a>
     </div>
   </div>
 </nav>
@@ -190,7 +191,7 @@
       <h1>Everything a perfumer knows<br>before the <em>first bottle</em> works.</h1>
       <p class="lead">A complete manual of the craft, and a codex that profiles every material worth knowing — one page each. Written for the person starting at zero, with the arithmetic, the regulations and the money left in.</p>
       <div class="cta-row">
-        <a class="btn btn-primary" href="#pricing">Get both — $59</a>
+        <a class="btn btn-primary" href="https://payhip.com/b/HTg6P">Get both — $59</a>
         <a class="btn btn-ghost" href="#contents">See what's inside</a>
       </div>
       <div class="hero-note">Instant PDF download · free revisions · A4, printable</div>
@@ -373,8 +374,8 @@
           <li>Costing, bottling and launch</li>
           <li>Four appendices and a glossary</li>
         </ul>
-        <a class="btn btn-ghost" href="https://payhip.com/b/REPLACE-VOL1">Buy Volume I</a>
-        <div class="fine">Instant download</div>
+        <span class="btn btn-ghost is-disabled" aria-disabled="true">Available soon</span>
+        <div class="fine">Or <a href="https://payhip.com/b/HTg6P" style="color:var(--gold-dark);text-decoration:underline">get both for $59</a></div>
       </div>
 
       <div class="tier best">
@@ -390,7 +391,7 @@
           <li>All four appendices</li>
           <li>Free revisions, both files</li>
         </ul>
-        <a class="btn btn-primary" href="https://payhip.com/b/REPLACE-BOTH">Get both — $59</a>
+        <a class="btn btn-primary" href="https://payhip.com/b/HTg6P">Get both — $59</a>
         <div class="fine">Instant download · both files</div>
       </div>
 
@@ -406,8 +407,8 @@
           <li>74 photographic plates</li>
           <li>Alphabetical index</li>
         </ul>
-        <a class="btn btn-ghost" href="https://payhip.com/b/REPLACE-VOL2">Buy Volume II</a>
-        <div class="fine">Instant download</div>
+        <span class="btn btn-ghost is-disabled" aria-disabled="true">Available soon</span>
+        <div class="fine">Or <a href="https://payhip.com/b/HTg6P" style="color:var(--gold-dark);text-decoration:underline">get both for $59</a></div>
       </div>
     </div>
 
@@ -515,6 +516,13 @@
 
 <script>
   // Guards against forgotten placeholder links before launch.
+
+  // If the email form has no endpoint yet, send the visitor to the sample instead of a dead POST.
+  var f = document.querySelector('form[action]');
+  if (f && f.getAttribute('action').indexOf('REPLACE') > -1) {
+    f.addEventListener('submit', function(e){ e.preventDefault(); window.location.href = 'sample.pdf'; });
+  }
+
   document.querySelectorAll('a[href*="REPLACE"]').forEach(function(a){
     a.addEventListener('click', function(e){
       e.preventDefault();

@@ -57,6 +57,8 @@
   .btn-primary:hover{background:#2C261C}
   .btn-ghost{border-color:#CFC3AA;color:var(--ink)}
   .btn-ghost:hover{border-color:var(--ink)}
+  .btn.is-disabled{opacity:.45;pointer-events:none;cursor:default}
+  .btn.is-disabled{opacity:.45;pointer-events:none;cursor:default}
   .hero-note{margin-top:18px;font-size:13px;color:var(--muted)}
   .covers{position:relative;display:flex;justify-content:center;align-items:flex-end;gap:0}
   .covers img{width:52%;box-shadow:0 24px 50px -18px rgba(23,20,15,.5);border:1px solid rgba(0,0,0,.15)}
@@ -373,8 +375,8 @@
           <li>Costing, bottling and launch</li>
           <li>Four appendices and a glossary</li>
         </ul>
-        <a class="btn btn-ghost" href="%%BUY_VOL1%%">Buy Volume I</a>
-        <div class="fine">Instant download</div>
+        <span class="btn btn-ghost is-disabled" aria-disabled="true">Available soon</span>
+        <div class="fine">Or <a href="https://payhip.com/b/HTg6P" style="color:var(--gold-dark);text-decoration:underline">get both for $59</a></div>
       </div>
 
       <div class="tier best">
@@ -406,8 +408,8 @@
           <li>74 photographic plates</li>
           <li>Alphabetical index</li>
         </ul>
-        <a class="btn btn-ghost" href="%%BUY_VOL2%%">Buy Volume II</a>
-        <div class="fine">Instant download</div>
+        <span class="btn btn-ghost is-disabled" aria-disabled="true">Available soon</span>
+        <div class="fine">Or <a href="https://payhip.com/b/HTg6P" style="color:var(--gold-dark);text-decoration:underline">get both for $59</a></div>
       </div>
     </div>
 
