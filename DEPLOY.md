@@ -59,8 +59,8 @@ Carrd cannot import an HTML file, so this means rebuilding by hand: one hero sec
 ## Step 3 — Sell the files (Payhip, free plan)
 
 1. Create a free Payhip account.
-2. Add product → Digital download → upload `perfumery-vol1-craft.pdf`. Title: *Perfumery: The Complete Manual*. Price: 29 USD. Publish.
-3. Repeat for `material-codex-vol2.pdf` at 39 USD.
+2. Add product → Digital download → upload `perfumery-vol1-craft.pdf`. Title: *Perfumery: The Complete Manual*. Price: 39 USD. Publish.
+3. Repeat for `material-codex-vol2.pdf` at 29 USD.
 4. Create a third product, *Both volumes*, at 59 USD, and attach both PDFs to it.
 5. Copy each product URL into `index.html` where the placeholders are.
 
