@@ -179,7 +179,7 @@
       <a href="#contents">Contents</a>
       <a href="#pricing">Pricing</a>
       <a href="#sample">Free sample</a>
-      <a class="btn-sm" href="https://payhip.com/b/HTg6P">Get both — $59</a>
+      <a class="btn-sm" href="https://payhip.com/b/HTg6P"><span data-usd-label="59">Get both — $59</span></a>
     </div>
   </div>
 </nav>
@@ -191,7 +191,7 @@
       <h1>Everything a perfumer knows<br>before the <em>first bottle</em> works.</h1>
       <p class="lead">A 39-page manual that takes you from your first dilution to a bottle you can legally sell — and a 107-page codex that profiles 103 materials one page each. Written for the person starting at zero, with the arithmetic, the regulations and the money left in.</p>
       <div class="cta-row">
-        <a class="btn btn-primary" href="https://payhip.com/b/HTg6P">Get both — $59</a>
+        <a class="btn btn-primary" href="https://payhip.com/b/HTg6P"><span data-usd-label="59">Get both — $59</span></a>
         <a class="btn btn-ghost" href="#contents">See what's inside</a>
       </div>
       <div class="hero-note">Instant PDF download · free revisions · A4, printable</div>
@@ -222,7 +222,7 @@
           <li>Bottles, pumps, labels, small-batch production and stability testing</li>
           <li>Costing, margin, wholesale maths, launch and the mistakes that end brands</li>
         </ul>
-        <div class="price-foot"><b>$39</b><a href="#pricing">Read the chapter list</a></div>
+        <div class="price-foot"><b data-usd="39">$39</b><a href="#pricing">Read the chapter list</a></div>
       </article>
 
       <article class="vol">
@@ -237,7 +237,7 @@
           <li>From bergamot and rose otto to oakmoss, oud and Ambroxan</li>
           <li>Alphabetical index and a families overview for fast reference</li>
         </ul>
-        <div class="price-foot"><b>$29</b><a href="#pricing">Read the chapter list</a></div>
+        <div class="price-foot"><b data-usd="29">$29</b><a href="#pricing">Read the chapter list</a></div>
       </article>
     </div>
   </div>
@@ -397,7 +397,7 @@
       <div class="tier">
         <h3>Volume I</h3>
         <div class="what">The method: dilution, structure, compliance, money.</div>
-        <div class="amount">$39</div>
+        <div class="amount"><span data-usd="39">$39</span></div>
         <div class="save">39 pages · 31 chapters</div>
         <ul>
           <li>Dilution and formula maths</li>
@@ -414,7 +414,7 @@
         <div class="flag">Best value</div>
         <h3>Both volumes</h3>
         <div class="what">The complete set: method and materials.</div>
-        <div class="amount">$59 <small>save $9</small></div>
+        <div class="amount"><span data-usd="59">$59</span> <small>save $9</small></div>
         <div class="save">146 pages · everything above</div>
         <ul>
           <li>Volume I — The Complete Manual</li>
@@ -423,14 +423,14 @@
           <li>All four appendices</li>
           <li>Free revisions, both files</li>
         </ul>
-        <a class="btn btn-primary" href="https://payhip.com/b/HTg6P">Get both — $59</a>
+        <a class="btn btn-primary" href="https://payhip.com/b/HTg6P"><span data-usd-label="59">Get both — $59</span></a>
         <div class="fine">Instant download · both files</div>
       </div>
 
       <div class="tier">
         <h3>Volume II</h3>
         <div class="what">The organ in writing — 103 materials.</div>
-        <div class="amount">$29</div>
+        <div class="amount"><span data-usd="29">$29</span></div>
         <div class="save">107 pages · 103 materials</div>
         <ul>
           <li>One page per material</li>
@@ -445,6 +445,7 @@
     </div>
 
     <p class="muted" style="font-size:13.5px;margin-top:26px">Payment by card and major wallets, handled by the store. Prices in USD. Buyers outside the US pay in their own currency at checkout; tax is calculated there.</p>
+    <p id="fx-note" class="muted" style="font-size:13px;margin-top:10px;display:none"></p>
     <p style="margin-top:14px;font-size:14.5px;max-width:70ch"><b>Delivery is instant, so all sales are final.</b> That is why the six-page sample is free and the full contents are listed above: read both before you pay.</p>
   </div>
 </section>
@@ -564,5 +565,54 @@
   });
 </script>
 
+
+<script>
+(function(){
+  var map = {"EUR":"fr","GBP":"en-GB","THB":"th","JPY":"ja","AUD":"en-AU","CAD":"en-CA","INR":"en-IN","SGD":"en-SG"};
+  var fallback = {EUR:0.92, GBP:0.79, THB:35.5, JPY:150, AUD:1.52, CAD:1.37, INR:84, SGD:1.35};
+  var locale = (navigator.languages && navigator.languages[0]) || navigator.language || "en-US";
+  var region = "";
+  try { region = new Intl.Locale(locale).region || ""; } catch(e) { region = (locale.split("-")[1]||""); }
+  var byRegion = {"DE":"EUR","FR":"EUR","ES":"EUR","IT":"EUR","NL":"EUR","BE":"EUR","AT":"EUR","IE":"EUR","PT":"EUR","FI":"EUR",
+                  "GB":"GBP","TH":"THB","JP":"JPY","AU":"AUD","CA":"CAD","IN":"INR","SG":"SGD"};
+  var cur = byRegion[region] || null;
+  if(!cur){
+    var tz = "";
+    try { tz = Intl.DateTimeFormat().resolvedOptions().timeZone || ""; } catch(e) {}
+    var byTz = [["Europe/London","GBP"],["Europe/","EUR"],["Asia/Bangkok","THB"],["Asia/Tokyo","JPY"],
+                ["Asia/Kolkata","INR"],["Asia/Calcutta","INR"],["Asia/Singapore","SGD"],
+                ["Australia/","AUD"],["Pacific/Auckland","AUD"],["America/Toronto","CAD"],["America/Vancouver","CAD"]];
+    for(var i=0;i<byTz.length;i++){ if(tz.indexOf(byTz[i][0])===0){ cur = byTz[i][1]; break; } }
+  }
+  if(!cur){ return; }
+  var fmt = new Intl.NumberFormat(locale, {style:"currency", currency:cur, maximumFractionDigits:0});
+  function tidy(v){
+    if(v>=1000) return Math.round(v/50)*50;
+    if(v>=100) return Math.round(v/5)*5;
+    return Math.round(v);
+  }
+  function paint(rates){
+    var r = rates && rates[cur] ? rates[cur] : fallback[cur];
+    if(!r) return;
+    document.querySelectorAll("[data-usd]").forEach(function(el){
+      var usd = parseFloat(el.getAttribute("data-usd"));
+      el.textContent = "\u2248" + fmt.format(tidy(usd*r));
+    });
+    document.querySelectorAll("[data-usd-label]").forEach(function(el){
+      var usd = parseFloat(el.getAttribute("data-usd-label"));
+      el.textContent = "Get both \u2014 \u2248" + fmt.format(tidy(usd*r));
+    });
+    var note = document.getElementById("fx-note");
+    if(note){
+      note.textContent = "Approximate prices shown in " + cur + " for your region. Checkout is in USD — your bank applies its own rate.";
+      note.style.display = "block";
+    }
+  }
+  fetch("https://api.frankfurter.app/latest?from=USD&to=EUR,GBP,THB,JPY,AUD,CAD,INR,SGD")
+    .then(function(r){ return r.json(); })
+    .then(function(d){ paint(d && d.rates); })
+    .catch(function(){ paint(null); });
+})();
+</script>
 </body>
 </html>
